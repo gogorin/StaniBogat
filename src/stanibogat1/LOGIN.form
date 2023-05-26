@@ -38,7 +38,7 @@
     <Container class="javax.swing.JPanel" name="mainpnl">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="33" red="33" type="rgb"/>
+          <Color blue="ff" green="33" red="33" type="rgb"/>
         </Property>
       </Properties>
 
@@ -127,9 +127,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtfldUSERNAME">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="99" red="99" type="rgb"/>
-            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="18" style="0"/>
             </Property>
@@ -192,9 +189,6 @@
         </Component>
         <Component class="javax.swing.JPasswordField" name="pswrdfldlogin">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="99" red="99" type="rgb"/>
-            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="18" style="0"/>
             </Property>
@@ -203,7 +197,7 @@
         <Container class="javax.swing.JPanel" name="loginpnl">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="6" green="94" red="f8" type="rgb"/>
+              <Color blue="ff" green="66" red="66" type="rgb"/>
             </Property>
           </Properties>
 

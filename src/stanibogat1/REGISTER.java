@@ -68,7 +68,7 @@ public class REGISTER extends javax.swing.JFrame{
         setUndecorated(true);
         setResizable(false);
 
-        mainpnl.setBackground(new java.awt.Color(51, 51, 51));
+        mainpnl.setBackground(new java.awt.Color(51, 51, 255));
 
         lblusername.setFont(new java.awt.Font("Apple Braille", 3, 18)); // NOI18N
         lblusername.setForeground(new java.awt.Color(255, 255, 255));
@@ -78,7 +78,6 @@ public class REGISTER extends javax.swing.JFrame{
         lblpassword.setForeground(new java.awt.Color(255, 255, 255));
         lblpassword.setText("Password:");
 
-        txtfldusername.setBackground(new java.awt.Color(153, 153, 153));
         txtfldusername.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
         btnregisternow.setBackground(new java.awt.Color(0, 153, 255));
@@ -96,10 +95,9 @@ public class REGISTER extends javax.swing.JFrame{
         notlbl.setForeground(new java.awt.Color(255, 255, 255));
         notlbl.setText("THE USERNAME IS ALREADY TAKEN");
 
-        pswrdfldregister.setBackground(new java.awt.Color(153, 153, 153));
         pswrdfldregister.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
-        jPanel1.setBackground(new java.awt.Color(248, 148, 6));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
 
         lblminimise.setFont(new java.awt.Font("Apple Braille", 2, 24)); // NOI18N
         lblminimise.setForeground(new java.awt.Color(255, 255, 255));

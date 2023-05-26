@@ -60,7 +60,7 @@ public class LOGIN extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        mainpnl.setBackground(new java.awt.Color(51, 51, 51));
+        mainpnl.setBackground(new java.awt.Color(51, 51, 255));
 
         lblUSERNAME.setFont(new java.awt.Font("Apple Braille", 2, 18)); // NOI18N
         lblUSERNAME.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,7 +70,6 @@ public class LOGIN extends javax.swing.JFrame {
         lblPASSWORD.setForeground(new java.awt.Color(255, 255, 255));
         lblPASSWORD.setText("PASSWORD:");
 
-        txtfldUSERNAME.setBackground(new java.awt.Color(153, 153, 153));
         txtfldUSERNAME.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
         btnLOGIN.setBackground(new java.awt.Color(0, 153, 255));
@@ -99,10 +98,9 @@ public class LOGIN extends javax.swing.JFrame {
         notlbl.setForeground(new java.awt.Color(255, 255, 255));
         notlbl.setText("THIS ACCOUNT DOESN'T EXIST");
 
-        pswrdfldlogin.setBackground(new java.awt.Color(153, 153, 153));
         pswrdfldlogin.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
-        loginpnl.setBackground(new java.awt.Color(248, 148, 6));
+        loginpnl.setBackground(new java.awt.Color(102, 102, 255));
 
         lblClose.setFont(new java.awt.Font("Apple Braille", 2, 24)); // NOI18N
         lblClose.setForeground(new java.awt.Color(255, 255, 255));
