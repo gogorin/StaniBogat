@@ -8,6 +8,6 @@ package stanibogat1;
  *
  * @author georgisa
  */
-public class OurList {
+public class ExtractInfo {
     
 }
