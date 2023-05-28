@@ -250,7 +250,7 @@ public class REGISTER extends javax.swing.JFrame{
         ReadandWrite obj1=new ReadandWrite();
        
         try {
-            if(obj1.checkIfMatchRegister()==false){
+            if(obj1.checkIfMatchRegister(obj)==false){
                 notlbl.setVisible(true);
                 ActionListener taskperformer=new ActionListener() {
                     @Override
@@ -277,7 +277,7 @@ public class REGISTER extends javax.swing.JFrame{
                 
             } 
         } catch (IOException ex) {
-            Logger.getLogger(REGISTER.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
                 
     }//GEN-LAST:event_btnregisternowActionPerformed

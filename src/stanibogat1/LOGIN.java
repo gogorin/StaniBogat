@@ -7,6 +7,9 @@ package stanibogat1;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import stanibogat1.REGISTER;
 import stanibogat1.ReadandWrite;
@@ -32,6 +35,13 @@ public class LOGIN extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setTitle("LOG IN");
         notlbl.setVisible(false);
+        User obj2=new User();
+        ReadandWrite obj3=new ReadandWrite();
+        try {
+            obj3.setinfotoFiles(obj2);
+        } catch (IOException ex) {
+            
+        }
     }
 
     /**
@@ -235,17 +245,21 @@ public class LOGIN extends javax.swing.JFrame {
         }
         ReadandWrite obj1=new ReadandWrite();
         
-        if(obj1.checkIfexistingLogin(obj)==false){
-       
-            dispose();
-            new StartGamePanel().setVisible(true);
-            
-        }
-        else{
-            notlbl.setVisible(true);
-           
-                  
+        try {
+            if(obj1.checkIfexistingLogin(obj)==false){
+                
+                dispose();
+                new StartGamePanel().setVisible(true);
+                
             }
+            else{
+                notlbl.setVisible(true);
+                
+                
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(LOGIN.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
           
         
@@ -294,7 +308,9 @@ public class LOGIN extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LOGIN().setVisible(true);
+                
+                    new LOGIN().setVisible(true);
+                
             }
         });
     }

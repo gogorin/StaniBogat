@@ -5,7 +5,7 @@ import stanibogat1.Node;
 
 public class LinkedList <T> 
 {
-    public Node head=new Node(0);
+    public Node head=new Node(null);
     public int size(){
         if(head==null){
             return 0;
@@ -20,7 +20,7 @@ public class LinkedList <T>
             return size;
         }
     }
-    public void add(int element){
+    public void add(T element){
         Node curr;
         if(head==null){
             curr=new Node(element);
@@ -64,7 +64,17 @@ public class LinkedList <T>
         }
     }
    
-
+    public boolean contains(T element){
+        Node Node=head.next;
+        while(Node!=null){
+            if(Node.getData()==element){
+                return true;
+            }
+            Node=Node.next;
+        }
+       return false;
+    }
+     
     public void removeLast(){
         Node Node=head.next;
         Node prevNode=head;

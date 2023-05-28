@@ -11,9 +11,9 @@ import java.util.regex.*;
 
 public class User extends REGISTER {
     
-    private static String username;
-    private static String password;
-  
+    private  String username;
+    private  String password;
+    
   
   
     
@@ -39,7 +39,7 @@ public class User extends REGISTER {
         }
     }
     
-    public static String getUsername(){
+    public  String getUsername(){
         return username;
     }
     public void setPassword(String password){
@@ -51,9 +51,10 @@ public class User extends REGISTER {
             throw new RuntimeException("Empty");
         }
     }
-    public static String getPassword(){
+    public  String getPassword(){
         return password;
     }
+    
     
     public User(String username, String password)
     {
@@ -73,7 +74,7 @@ public class User extends REGISTER {
     @Override
     public String toString()
     {
-           return String.format("%s \n %s ",getUsername(),getPassword()) ;
+           return String.format("%s \n %s",getUsername(),getPassword()) ;
     }
 }
 
