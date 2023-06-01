@@ -6,8 +6,8 @@ package stanibogat1;
 
 /**
  *
- * @author georgisa
+ * @author user
  */
-public class ExtractInfo {
+public class Quicksort {
     
 }
