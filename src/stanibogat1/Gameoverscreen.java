@@ -1,7 +1,6 @@
 package stanibogat1;
 
 import javax.swing.JFrame;
-import wordleandnerdle.ENTRYPAGE;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -12,24 +11,17 @@ import wordleandnerdle.ENTRYPAGE;
  *
  * @author mac
  */
-public class Gameover extends javax.swing.JFrame {
+public class Gameoverscreen extends javax.swing.JFrame {
 
     
            
-       private static String answer;
-       
-       public static void setANswer(String ans){
-           Gameover.answer=ans;
-       }
-       public static String getAnswer(){
-           return answer;
-       }
+      
     
    
-    public Gameover() {
+    public Gameoverscreen() {
         initComponents();
         setLocationRelativeTo(null);
-         lblrevealwordorequation.setText(String.format("THE ANSWER IS %s", getAnswer()));
+         
         
     }
 
@@ -168,7 +160,7 @@ public class Gameover extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         dispose();
-        new ENTRYPAGE().setVisible(true);
+        new StartGamePanel().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked

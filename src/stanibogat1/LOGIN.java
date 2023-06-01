@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
-import stanibogat1.REGISTER;
+import stanibogat1.Register;
 import stanibogat1.ReadandWrite;
 import stanibogat1.StartGamePanel;
 import stanibogat1.StartGamePanel;
@@ -24,12 +24,12 @@ import stanibogat1.User;
  *
  * @author mac
  */
-public class LOGIN extends javax.swing.JFrame {
+public class Login extends javax.swing.JFrame {
 
     /**
      * Creates new form LOGIN
      */
-    public LOGIN() {
+    public Login() {
         initComponents();
         setResizable(false);
         setLocationRelativeTo(null);
@@ -74,18 +74,18 @@ public class LOGIN extends javax.swing.JFrame {
 
         lblUSERNAME.setFont(new java.awt.Font("Apple Braille", 2, 18)); // NOI18N
         lblUSERNAME.setForeground(new java.awt.Color(255, 255, 255));
-        lblUSERNAME.setText("USERNAME:");
+        lblUSERNAME.setText("Потребителско име :");
 
         lblPASSWORD.setFont(new java.awt.Font("Apple Braille", 2, 18)); // NOI18N
         lblPASSWORD.setForeground(new java.awt.Color(255, 255, 255));
-        lblPASSWORD.setText("PASSWORD:");
+        lblPASSWORD.setText("Парола :");
 
         txtfldUSERNAME.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
         btnLOGIN.setBackground(new java.awt.Color(0, 153, 255));
         btnLOGIN.setFont(new java.awt.Font("Al Nile", 1, 14)); // NOI18N
         btnLOGIN.setForeground(new java.awt.Color(255, 255, 255));
-        btnLOGIN.setText("LOG IN");
+        btnLOGIN.setText("Вход");
         btnLOGIN.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnLOGIN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +96,7 @@ public class LOGIN extends javax.swing.JFrame {
         btnREGISTER.setBackground(new java.awt.Color(204, 0, 0));
         btnREGISTER.setFont(new java.awt.Font("Al Nile", 1, 14)); // NOI18N
         btnREGISTER.setForeground(new java.awt.Color(255, 255, 255));
-        btnREGISTER.setText("REGISTER");
+        btnREGISTER.setText("Регистрация");
         btnREGISTER.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnREGISTER.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +106,7 @@ public class LOGIN extends javax.swing.JFrame {
 
         notlbl.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
         notlbl.setForeground(new java.awt.Color(255, 255, 255));
-        notlbl.setText("THIS ACCOUNT DOESN'T EXIST");
+        notlbl.setText("Акаунтът не съществува");
 
         pswrdfldlogin.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
@@ -126,7 +126,7 @@ public class LOGIN extends javax.swing.JFrame {
         lblWELCOME1.setFont(new java.awt.Font("Apple Braille", 2, 24)); // NOI18N
         lblWELCOME1.setForeground(new java.awt.Color(255, 255, 255));
         lblWELCOME1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblWELCOME1.setText("LOGIN");
+        lblWELCOME1.setText("Вход");
 
         lblMinimise.setFont(new java.awt.Font("Apple Braille", 2, 24)); // NOI18N
         lblMinimise.setForeground(new java.awt.Color(255, 255, 255));
@@ -183,7 +183,7 @@ public class LOGIN extends javax.swing.JFrame {
                         .addComponent(btnREGISTER, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnLOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainpnlLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(notlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -258,7 +258,7 @@ public class LOGIN extends javax.swing.JFrame {
                 
             }
         } catch (IOException ex) {
-            Logger.getLogger(LOGIN.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         
           
@@ -268,7 +268,7 @@ public class LOGIN extends javax.swing.JFrame {
     private void btnREGISTERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnREGISTERActionPerformed
         // TODO add your handling code here:
         dispose();
-        new REGISTER().setVisible(true);
+        new Register().setVisible(true);
     }//GEN-LAST:event_btnREGISTERActionPerformed
 
     private void lblCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCloseMouseClicked
@@ -295,21 +295,22 @@ public class LOGIN extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LOGIN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LOGIN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LOGIN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LOGIN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 
-                    new LOGIN().setVisible(true);
+                    new Login().setVisible(true);
                 
             }
         });

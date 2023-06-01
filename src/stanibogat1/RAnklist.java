@@ -6,25 +6,21 @@ package stanibogat1;
 
 import java.awt.Color;
 import javax.swing.JFrame;
-import wordleandnerdle.ENTRYPAGE;
-import wordleandnerdle.ReadandWrite;
+
 
 /**
  *
  * @author mac
  */
-public class RAnklist extends javax.swing.JFrame {
+public class Ranklist extends javax.swing.JFrame {
 
     /**
      * Creates new form RAnklist
      */
-    public RAnklist() {
+    public Ranklist() {
         initComponents();
         setLocationRelativeTo(null);
-        edpnranks.setText(ReadandWrite.getStandings());
-        edpnranks.setEditable(false);
-        edpnranks.setForeground(Color.black);
-        lblyoupos.setText(String.format("YOU ARE CURRENTLY IN %d POSITION",ReadandWrite.getPos()));
+        
         
         
     }
@@ -165,7 +161,7 @@ public class RAnklist extends javax.swing.JFrame {
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         dispose();
-        new ENTRYPAGE().setVisible(true);
+        new StartGamePanel().setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked

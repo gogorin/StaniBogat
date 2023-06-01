@@ -9,7 +9,7 @@ package stanibogat1;
 import java.util.regex.*;
 
 
-public class User extends REGISTER {
+public class User extends Register {
     
     private  String username;
     private  String password;

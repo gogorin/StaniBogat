@@ -24,13 +24,13 @@ import stanibogat1.User;
  *
  * @author mac
  */
-public class REGISTER extends javax.swing.JFrame{
+public class Register extends javax.swing.JFrame{
 
     /**
      * Creates new form REGISTER
      */
     
-    public REGISTER() {
+    public Register() {
         initComponents();
         setResizable(false);
         setLocationRelativeTo(null);
@@ -72,18 +72,18 @@ public class REGISTER extends javax.swing.JFrame{
 
         lblusername.setFont(new java.awt.Font("Apple Braille", 3, 18)); // NOI18N
         lblusername.setForeground(new java.awt.Color(255, 255, 255));
-        lblusername.setText("Username:");
+        lblusername.setText("Потребителско име :");
 
         lblpassword.setFont(new java.awt.Font("Apple Braille", 3, 18)); // NOI18N
         lblpassword.setForeground(new java.awt.Color(255, 255, 255));
-        lblpassword.setText("Password:");
+        lblpassword.setText("Парола :");
 
         txtfldusername.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
         btnregisternow.setBackground(new java.awt.Color(0, 153, 255));
         btnregisternow.setFont(new java.awt.Font("Al Nile", 1, 14)); // NOI18N
         btnregisternow.setForeground(new java.awt.Color(255, 255, 255));
-        btnregisternow.setText("REGISTER NOW");
+        btnregisternow.setText("Регистрирай се сега");
         btnregisternow.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnregisternow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +93,7 @@ public class REGISTER extends javax.swing.JFrame{
 
         notlbl.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
         notlbl.setForeground(new java.awt.Color(255, 255, 255));
-        notlbl.setText("THE USERNAME IS ALREADY TAKEN");
+        notlbl.setText("Потребителското име вече е заето");
 
         pswrdfldregister.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
@@ -111,7 +111,7 @@ public class REGISTER extends javax.swing.JFrame{
 
         lblregister1.setFont(new java.awt.Font("Apple Braille", 2, 24)); // NOI18N
         lblregister1.setForeground(new java.awt.Color(255, 255, 255));
-        lblregister1.setText("REGISTER");
+        lblregister1.setText("Регистрация");
 
         lblclose.setFont(new java.awt.Font("Apple Braille", 2, 24)); // NOI18N
         lblclose.setForeground(new java.awt.Color(255, 255, 255));
@@ -139,8 +139,8 @@ public class REGISTER extends javax.swing.JFrame{
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblregister1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 265, Short.MAX_VALUE)
+                .addComponent(lblregister1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblgoback, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblminimise, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -159,15 +159,15 @@ public class REGISTER extends javax.swing.JFrame{
                     .addComponent(lblgoback, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        expressionlbl.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        expressionlbl.setForeground(new java.awt.Color(255, 51, 51));
+        expressionlbl.setFont(new java.awt.Font("Al Nile", 1, 14)); // NOI18N
+        expressionlbl.setForeground(new java.awt.Color(255, 255, 255));
         expressionlbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        expressionlbl.setText("Your username must contain only letters and numbers and it must be maximum 10 symbols");
+        expressionlbl.setText("Потребителското име трябва да съдържа само букви и цифри и трябва да е максимум 10 символа.");
 
-        expressionlbl1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        expressionlbl1.setForeground(new java.awt.Color(255, 0, 0));
+        expressionlbl1.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 14)); // NOI18N
+        expressionlbl1.setForeground(new java.awt.Color(255, 255, 255));
         expressionlbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        expressionlbl1.setText("Your password must me maximum 10 symbols");
+        expressionlbl1.setText("Паролата трябва да е максимум 10 символа");
 
         javax.swing.GroupLayout mainpnlLayout = new javax.swing.GroupLayout(mainpnl);
         mainpnl.setLayout(mainpnlLayout);
@@ -188,11 +188,13 @@ public class REGISTER extends javax.swing.JFrame{
                             .addComponent(pswrdfldregister)))
                     .addComponent(btnregisternow, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(expressionlbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainpnlLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(expressionlbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(mainpnlLayout.createSequentialGroup()
+                .addComponent(expressionlbl)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         mainpnlLayout.setVerticalGroup(
             mainpnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,7 +268,7 @@ public class REGISTER extends javax.swing.JFrame{
                 try {
                     obj1.setinfotoFiles(obj);
                     dispose();
-                    new LOGIN().setVisible(true);
+                    new Login().setVisible(true);
                     
                     
                     
@@ -293,7 +295,7 @@ public class REGISTER extends javax.swing.JFrame{
     private void lblgobackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblgobackMouseClicked
 
         dispose();
-      new LOGIN().setVisible(true);
+      new Login().setVisible(true);
       
     }//GEN-LAST:event_lblgobackMouseClicked
 
@@ -311,20 +313,21 @@ public class REGISTER extends javax.swing.JFrame{
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(REGISTER.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(REGISTER.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(REGISTER.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(REGISTER.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new REGISTER().setVisible(true);
+                new Register().setVisible(true);
             }
         });
     }

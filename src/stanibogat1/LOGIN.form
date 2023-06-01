@@ -67,7 +67,7 @@
                           <Component id="btnLOGIN" min="-2" pref="130" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="81" max="32767" attributes="0"/>
+                  <EmptySpace pref="87" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
@@ -111,7 +111,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="USERNAME:"/>
+            <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x442;&#x440;&#x435;&#x431;&#x438;&#x442;&#x435;&#x43b;&#x441;&#x43a;&#x43e; &#x438;&#x43c;&#x435; :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblPASSWORD">
@@ -122,7 +122,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="PASSWORD:"/>
+            <Property name="text" type="java.lang.String" value="&#x41f;&#x430;&#x440;&#x43e;&#x43b;&#x430; :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtfldUSERNAME">
@@ -143,7 +143,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="LOG IN"/>
+            <Property name="text" type="java.lang.String" value="&#x412;&#x445;&#x43e;&#x434;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                 <BevelBorder/>
@@ -165,7 +165,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="REGISTER"/>
+            <Property name="text" type="java.lang.String" value="&#x420;&#x435;&#x433;&#x438;&#x441;&#x442;&#x440;&#x430;&#x446;&#x438;&#x44f;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                 <BevelBorder/>
@@ -184,7 +184,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="THIS ACCOUNT DOESN&apos;T EXIST"/>
+            <Property name="text" type="java.lang.String" value="&#x410;&#x43a;&#x430;&#x443;&#x43d;&#x442;&#x44a;&#x442; &#x43d;&#x435; &#x441;&#x44a;&#x449;&#x435;&#x441;&#x442;&#x432;&#x443;&#x432;&#x430;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="pswrdfldlogin">
@@ -256,7 +256,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="LOGIN"/>
+                <Property name="text" type="java.lang.String" value="&#x412;&#x445;&#x43e;&#x434;"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblMinimise">
