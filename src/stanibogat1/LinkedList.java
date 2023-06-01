@@ -20,7 +20,7 @@ public class LinkedList <T>
             return size;
         }
     }
-    public void add(int element){
+    public void add(T element){
         Node curr;
         if(head==null){
             curr=new Node(element);
