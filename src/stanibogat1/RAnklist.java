@@ -48,9 +48,9 @@ public class Ranklist extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 255));
 
-        jPanel2.setBackground(new java.awt.Color(248, 148, 6));
+        jPanel2.setBackground(new java.awt.Color(102, 102, 255));
 
         jLabel1.setFont(new java.awt.Font("Herculanum", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -64,7 +64,7 @@ public class Ranklist extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Herculanum", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("RANKLIST");
+        jLabel2.setText("Класация");
 
         jLabel3.setFont(new java.awt.Font("Herculanum", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -113,7 +113,7 @@ public class Ranklist extends javax.swing.JFrame {
                 .addGap(17, 17, 17))
         );
 
-        edpnranks.setBackground(new java.awt.Color(51, 51, 51));
+        edpnranks.setBackground(new java.awt.Color(51, 51, 255));
         edpnranks.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 48)); // NOI18N
         edpnranks.setForeground(new java.awt.Color(255, 255, 255));
         edpnranks.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));

@@ -12,7 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import stanibogat1.Register;
-import stanibogat1.ReadandWrite;
+import stanibogat1.FileWorker;
 import stanibogat1.StartGamePanel;
 import stanibogat1.StartGamePanel;
 import stanibogat1.User;
@@ -35,13 +35,7 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setTitle("LOG IN");
         notlbl.setVisible(false);
-        User obj2=new User();
-        ReadandWrite obj3=new ReadandWrite();
-        try {
-            obj3.setinfotoFiles(obj2);
-        } catch (IOException ex) {
-            
-        }
+        
     }
 
     /**
@@ -225,28 +219,16 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLOGINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLOGINActionPerformed
-        User obj = new User();
-        try
-        {
-            obj=new User(txtfldUSERNAME.getText(),pswrdfldlogin.getText());
-        }
-        catch (RuntimeException Empty)
-        {
-            System.err.println("Error Caught");
-            notlbl.setVisible(true);
-            ActionListener taskperformer=new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    notlbl.setVisible(false);
-
-                }
-            };
-            new javax.swing.Timer(7000, taskperformer).start();
-        }
-        ReadandWrite obj1=new ReadandWrite();
+        User obj;
+       
+          
+        obj=new User(txtfldUSERNAME.getText(),pswrdfldlogin.getText());
+       
+        FileWorker obj1=new FileWorker();
         
         try {
-            if(obj1.checkIfexistingLogin(obj)==false){
+            System.out.println(obj1.checkIfexistingLogin(obj));
+            if(obj1.checkIfexistingLogin(obj)==true){
                 
                 dispose();
                 new StartGamePanel().setVisible(true);
@@ -258,7 +240,7 @@ public class Login extends javax.swing.JFrame {
                 
             }
         } catch (IOException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error");
         }
         
           

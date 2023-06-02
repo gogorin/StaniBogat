@@ -30,4 +30,21 @@ public class Stack <T>
             head.next=current.next;
         }
     }
+    
+    public int size()
+    {
+        Node node=head;
+        if(node.next==null){
+            return 0;
+        }
+        else{
+            int counter=0;
+            while(node.next!=null){
+                counter++;
+                node=node.next;
+            }
+            return counter;
+        }
+        
+    }
 }

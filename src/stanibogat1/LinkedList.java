@@ -67,14 +67,28 @@ public class LinkedList <T>
     public boolean contains(T element){
         Node Node=head.next;
         while(Node!=null){
-            if(Node.getData()==element){
+            if(Node.getData().equals(element)){
                 return true;
             }
             Node=Node.next;
         }
        return false;
     }
-     
+    
+    public void remove(int index)
+    {
+        Node Node=head.next;
+        Node Prev=head;
+        int i=0;
+        while(i<index)
+        {
+            Node=Node.next;
+            Prev=Prev.next;
+            i++;
+        }
+        Prev.next=Node.next;
+    }
+    
     public void removeLast(){
         Node Node=head.next;
         Node prevNode=head;
@@ -109,8 +123,6 @@ public class LinkedList <T>
 
     }
    
-
-
 
     public String toString() {
         String otg="";

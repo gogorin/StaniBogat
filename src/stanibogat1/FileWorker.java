@@ -17,7 +17,7 @@ import java.io.IOException;
  *
  * @author mac
  */
-public class ReadandWrite {
+public class FileWorker {
  
 
     
@@ -35,9 +35,9 @@ public class ReadandWrite {
             while((str=bf.readLine())!=null){
                 
                 String arr[]=str.split("\t");
+                User obj=new User(arr[0],arr[1]);
                 System.out.println(arr[0]);
                 System.out.println(arr[1]);
-                User obj=new User(arr[0],arr[1]);
                 list.add(obj);
                 }
             bf.close();
@@ -66,14 +66,11 @@ public class ReadandWrite {
     
      public boolean checkIfexistingLogin(User obj) throws IOException{
        LinkedList<User> list=convertInfoFromFileToList();
-       if(list.contains(obj)==true){
-           return true;
-       }
-       return false;
+       return list.contains(obj);
     }
      
  
-    public void setinfotoFiles(User obj) throws IOException{
+    public void setinfotoFiles(User obj,Ranklistuser obj1) throws IOException{
         try {
           
             fw = new FileWriter("Secretinfo.txt",true);
@@ -81,7 +78,7 @@ public class ReadandWrite {
             fw.close();
               
             fw = new FileWriter("Points.txt", true);
-            fw.write(obj.getUsername() + "\t" + "0"+ '\n');
+            fw.write(obj1.getUsername() + "\t" +obj1.getPoints()+ '\n');
             fw.close();
             
         }

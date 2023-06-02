@@ -34,7 +34,6 @@ public class Goodgamescreen extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         mainpnl = new javax.swing.JPanel();
         lblscore = new javax.swing.JLabel();
-        lbltotalscore = new javax.swing.JLabel();
         btnBacktomenu = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -47,19 +46,16 @@ public class Goodgamescreen extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        mainpnl.setBackground(new java.awt.Color(51, 51, 51));
+        mainpnl.setBackground(new java.awt.Color(51, 51, 255));
 
         lblscore.setFont(new java.awt.Font("Herculanum", 0, 48)); // NOI18N
         lblscore.setForeground(new java.awt.Color(255, 255, 255));
         lblscore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
-        lbltotalscore.setFont(new java.awt.Font("Herculanum", 0, 36)); // NOI18N
-        lbltotalscore.setForeground(new java.awt.Color(255, 255, 255));
-        lbltotalscore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblscore.setText("Ти спечели 100 000 точки!");
 
         btnBacktomenu.setBackground(new java.awt.Color(0, 153, 255));
         btnBacktomenu.setForeground(new java.awt.Color(255, 255, 255));
-        btnBacktomenu.setText("BACK TO MENU");
+        btnBacktomenu.setText("Начало");
         btnBacktomenu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnBacktomenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,11 +63,11 @@ public class Goodgamescreen extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(248, 148, 6));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
 
         jLabel1.setFont(new java.awt.Font("Herculanum", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("EXCELLENT! ;)");
+        jLabel1.setText("Браво !");
 
         jLabel2.setFont(new java.awt.Font("Herculanum", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -124,7 +120,6 @@ public class Goodgamescreen extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainpnlLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainpnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbltotalscore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblscore, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mainpnlLayout.createSequentialGroup()
                         .addGap(208, 208, 208)
@@ -136,11 +131,9 @@ public class Goodgamescreen extends javax.swing.JFrame {
             mainpnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainpnlLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
+                .addGap(81, 81, 81)
                 .addComponent(lblscore, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(lbltotalscore, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addComponent(btnBacktomenu, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
@@ -190,7 +183,6 @@ public class Goodgamescreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblscore;
-    private javax.swing.JLabel lbltotalscore;
     private javax.swing.JPanel mainpnl;
     // End of variables declaration//GEN-END:variables
 }

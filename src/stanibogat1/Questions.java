@@ -7,6 +7,7 @@ public class Questions {
     private String wrong1;
     private String wrong2;
     private String wrong3;
+    private int difficulty;
 
     public void setQuestion(String question) {
         this.question = question;
@@ -48,12 +49,22 @@ public class Questions {
         return wrong3;
     }
 
-    public Questions(String question, String answer, String wrong1, String wrong2, String wrong3) {
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
+    }
+    
+
+    public Questions(String question, String answer, String wrong1, String wrong2, String wrong3,int difficulty) {
         this.question = question;
         this.answer = answer;
         this.wrong1 = wrong1;
         this.wrong2 = wrong2;
         this.wrong3 = wrong3;
+        this.difficulty=difficulty;
     }
     
     

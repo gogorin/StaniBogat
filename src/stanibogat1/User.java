@@ -76,5 +76,14 @@ public class User extends Register {
     {
            return String.format("%s \n %s",getUsername(),getPassword()) ;
     }
+    
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (!(obj instanceof User)) return false;
+        User b = (User)obj;
+        return this.getUsername().equals(b.getUsername())
+                && this.getPassword().equals(b.getPassword());
+    }
 }
 

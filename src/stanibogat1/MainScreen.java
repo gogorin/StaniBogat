@@ -4,6 +4,8 @@
  */
 package stanibogat1;
 
+import java.util.Random;
+
 /**
  *
  * @author user
@@ -16,7 +18,65 @@ public class MainScreen extends javax.swing.JFrame {
     public MainScreen() {
         initComponents();
     }
+    private LinkedList<Questions> list1;
+    private LinkedList<Questions> list2;
+    private LinkedList<Questions> list3;
+    
+    private Questions randQuestion(int difficulty) 
+    {
+        list1=new LinkedList<>();
+        Random rand = new Random();
+        if (difficulty == 1) 
+        {
+            int k = rand.nextInt(list1.size());
+            Questions qu;
+            qu = list1.get(k);
+            list1.remove(k);
+            return qu;
+        } 
+        else if (difficulty == 2) 
+        {
+            int k = rand.nextInt(list2.size());
+            Questions qu;
+            qu = list2.get(k);
+            list2.remove(k);
+            return qu;
+        } 
+        else 
+        {   
+            int k = rand.nextInt(list3.size());
+            Questions qu;
+            qu = list3.get(k);
+            list3.remove(k);
+            return qu;
+        }
+    }
+    
+    
 
+    private Stack fillStack(Stack<Questions> stack)
+    {
+        if(stack.size()==15)
+        {
+            return stack;
+        }
+        else if(stack.size()<5)
+        {
+            stack.push(randQuestion(1));
+            return fillStack(stack);
+        }
+        else if(stack.size()>5 && stack.size()<10)
+        {
+            stack.push(randQuestion(2));
+            return fillStack(stack);
+        }
+        else 
+        {
+            stack.push(randQuestion(3));
+             return fillStack(stack);
+        }
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,87 +86,49 @@ public class MainScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnlAnswers = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        btnAnswer1 = new javax.swing.JButton();
-        btnAnswer2 = new javax.swing.JButton();
-        btnAnswer4 = new javax.swing.JButton();
-        btnAnswer3 = new javax.swing.JButton();
+        mnpnl = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        mnpnl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAnswer1.setText("jButton1");
+        jLabel2.setText("jLabel2");
+        mnpnl.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 140, -1));
 
-        btnAnswer2.setText("jButton1");
+        jLabel3.setText("jLabel3");
+        mnpnl.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 140, -1));
 
-        btnAnswer4.setText("jButton1");
+        jLabel4.setText("jLabel4");
+        mnpnl.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 140, -1));
 
-        btnAnswer3.setText("jButton1");
+        jLabel5.setText("jLabel5");
+        mnpnl.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, 140, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnAnswer3, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAnswer4, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnAnswer1, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAnswer2, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAnswer1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAnswer2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAnswer3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAnswer4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12))
-        );
+        jLabel6.setText("jLabel6");
+        mnpnl.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 340, 40));
 
-        javax.swing.GroupLayout pnlAnswersLayout = new javax.swing.GroupLayout(pnlAnswers);
-        pnlAnswers.setLayout(pnlAnswersLayout);
-        pnlAnswersLayout.setHorizontalGroup(
-            pnlAnswersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlAnswersLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-        pnlAnswersLayout.setVerticalGroup(
-            pnlAnswersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAnswersLayout.createSequentialGroup()
-                .addContainerGap(449, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
-        );
+        jLabel7.setText("jLabel7");
+        mnpnl.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 110, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MicrosoftTeams-image.png"))); // NOI18N
+        mnpnl.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(pnlAnswers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(mnpnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(pnlAnswers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(mnpnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -148,11 +170,13 @@ public class MainScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAnswer1;
-    private javax.swing.JButton btnAnswer2;
-    private javax.swing.JButton btnAnswer3;
-    private javax.swing.JButton btnAnswer4;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel pnlAnswers;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel mnpnl;
     // End of variables declaration//GEN-END:variables
 }

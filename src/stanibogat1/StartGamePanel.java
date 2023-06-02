@@ -17,6 +17,7 @@ public class StartGamePanel extends javax.swing.JFrame {
      */
     public StartGamePanel() {
         initComponents();
+        setLocationRelativeTo(null);
      
  // MihsilBlbl.setIcon(new ImageIcon("\StaniBogat1\src\Images\MihailB.png"));
         
@@ -36,6 +37,7 @@ public class StartGamePanel extends javax.swing.JFrame {
         Коиискалбл = new javax.swing.JLabel();
         Logolbl = new javax.swing.JLabel();
         PLaybtn = new javax.swing.JButton();
+        ranklistbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,23 +55,38 @@ public class StartGamePanel extends javax.swing.JFrame {
         PLaybtn.setForeground(new java.awt.Color(204, 204, 204));
         PLaybtn.setText("ИГРАЙ");
 
+        ranklistbtn.setBackground(new java.awt.Color(0, 0, 102));
+        ranklistbtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ranklistbtn.setForeground(new java.awt.Color(204, 204, 204));
+        ranklistbtn.setText("Класиране");
+        ranklistbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ranklistbtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout mianpnlLayout = new javax.swing.GroupLayout(mianpnl);
         mianpnl.setLayout(mianpnlLayout);
         mianpnlLayout.setHorizontalGroup(
             mianpnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mianpnlLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(mianpnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(mianpnlLayout.createSequentialGroup()
+                .addGroup(mianpnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mianpnlLayout.createSequentialGroup()
                         .addComponent(Logolbl, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(176, 176, 176)
                         .addComponent(PLaybtn, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mianpnlLayout.createSequentialGroup()
+                    .addGroup(mianpnlLayout.createSequentialGroup()
                         .addComponent(MihsilBlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
-                        .addComponent(Коиискалбл, javax.swing.GroupLayout.PREFERRED_SIZE, 536, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(154, 154, 154))))
+                        .addGroup(mianpnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mianpnlLayout.createSequentialGroup()
+                                .addComponent(Коиискалбл, javax.swing.GroupLayout.PREFERRED_SIZE, 536, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(154, 154, 154))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mianpnlLayout.createSequentialGroup()
+                                .addComponent(ranklistbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(15, 15, 15))))))
         );
         mianpnlLayout.setVerticalGroup(
             mianpnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,7 +98,9 @@ public class StartGamePanel extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Logolbl, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(mianpnlLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addComponent(ranklistbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Коиискалбл, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(76, 76, 76)
                         .addComponent(PLaybtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -104,6 +123,11 @@ public class StartGamePanel extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ranklistbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ranklistbtnActionPerformed
+        dispose();
+        new Ranklist().setVisible(true);
+    }//GEN-LAST:event_ranklistbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,6 +169,7 @@ public class StartGamePanel extends javax.swing.JFrame {
     private javax.swing.JLabel MihsilBlbl;
     private javax.swing.JButton PLaybtn;
     private javax.swing.JPanel mianpnl;
+    private javax.swing.JButton ranklistbtn;
     private javax.swing.JLabel Коиискалбл;
     // End of variables declaration//GEN-END:variables
 }
