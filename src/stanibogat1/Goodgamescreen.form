@@ -90,7 +90,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="&#x422;&#x438; &#x441;&#x43f;&#x435;&#x447;&#x435;&#x43b;&#x438; 100 000 &#x442;&#x43e;&#x447;&#x43a;&#x438;!"/>
+            <Property name="text" type="java.lang.String" value="&#x422;&#x438; &#x441;&#x43f;&#x435;&#x447;&#x435;&#x43b;&#x438; 1500 &#x442;&#x43e;&#x447;&#x43a;&#x438;!"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnBacktomenu">

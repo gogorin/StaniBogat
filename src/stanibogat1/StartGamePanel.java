@@ -54,6 +54,11 @@ public class StartGamePanel extends javax.swing.JFrame {
         PLaybtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         PLaybtn.setForeground(new java.awt.Color(204, 204, 204));
         PLaybtn.setText("ИГРАЙ");
+        PLaybtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PLaybtnActionPerformed(evt);
+            }
+        });
 
         ranklistbtn.setBackground(new java.awt.Color(0, 0, 102));
         ranklistbtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -128,6 +133,11 @@ public class StartGamePanel extends javax.swing.JFrame {
         dispose();
         new Ranklist().setVisible(true);
     }//GEN-LAST:event_ranklistbtnActionPerformed
+
+    private void PLaybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PLaybtnActionPerformed
+        // TODO add your handling code here:
+        new MainScreen().setVisible(true);
+    }//GEN-LAST:event_PLaybtnActionPerformed
 
     /**
      * @param args the command line arguments

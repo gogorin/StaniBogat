@@ -4,13 +4,16 @@
  */
 package stanibogat1;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author n
  */
 public interface QuestionsgeneratorInterface {
-   public abstract void generateQuetion(int difficulty,javax.swing.JLabel lblq,javax.swing.JLabel lblA,javax.swing.JLabel lblB,javax.swing.JLabel lblC,javax.swing.JLabel lblD);
-   public abstract void Joker5050();
-   public abstract String JokerPhoneAFriend();
-   public abstract String JokerAudience();
+ 
+   public abstract void Joker5050(javax.swing.JLabel[] arr,int i,int counter);
+   public abstract void JokerPhoneAFriend(Questions obj);
+   public abstract void JokerAudience(Questions obj);
+   
 }

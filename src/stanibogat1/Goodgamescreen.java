@@ -51,7 +51,7 @@ public class Goodgamescreen extends javax.swing.JFrame {
         lblscore.setFont(new java.awt.Font("Herculanum", 0, 48)); // NOI18N
         lblscore.setForeground(new java.awt.Color(255, 255, 255));
         lblscore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblscore.setText("Ти спечели 100 000 точки!");
+        lblscore.setText("Ти спечели 1500 точки!");
 
         btnBacktomenu.setBackground(new java.awt.Color(0, 153, 255));
         btnBacktomenu.setForeground(new java.awt.Color(255, 255, 255));

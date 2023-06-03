@@ -4,7 +4,9 @@
  */
 package stanibogat1;
 
+import java.util.Random;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 
 
@@ -15,31 +17,58 @@ import javax.swing.JLabel;
  */
 public class Questionsgeneratorclass implements QuestionsgeneratorInterface{
 
+  
+
     @Override
-    public void generateQuetion(int difficulty, JLabel lblq, JLabel lblA, JLabel lblB, JLabel lblC, JLabel lblD) {
-        switch(difficulty){
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
+    public void Joker5050(javax.swing.JLabel[] arr,int i,int counter) {
+        Random gen=new Random();
+        i=gen.nextInt(4);
+        if(arr[i].getText().equals("")){
+            Joker5050(arr, i, counter);
+        }
+        if(counter==2){
+            return;
+        }else{
+           
+            arr[i].setText("");
+            Joker5050(arr, i, counter+1);
         }
     }
 
     @Override
-    public void Joker5050() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void JokerPhoneAFriend(Questions obj) {
+        switch(obj.getDifficulty()){
+            case 1:
+                JOptionPane.showMessageDialog(null, "Верният отговор е "+obj.getAnswer());
+                break;
+            case 2:
+                JOptionPane.showMessageDialog(null, "Не съм сигурен, но мисля, че верният отговор е "+obj.getAnswer());
+                break;
+            case 3:
+                Random gen =new Random();
+                int i=gen.nextInt(2);
+                if(i==1){
+                    JOptionPane.showMessageDialog(null, "Не съм сигурен, но мисля, че верният отговор е "+obj.getAnswer());
+                }else{
+                    JOptionPane.showMessageDialog(null, "Съжалявам, но не съм компетентен по тази тема");
+                }
+                        
+                break;
+                
+                
+        }
     }
 
     @Override
-    public String JokerPhoneAFriend() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void JokerAudience(Questions obj) {
+        int a=60;
+        int b=20;
+        int c=7;
+        int d=13;
+        JOptionPane.showMessageDialog(null,obj.getAnswer()+" - "+a+"\n"+obj.getWrong3()+" - "+b+"\n"+obj.getWrong2()+" - "+c+"\n"+obj.getWrong1()+" - "+d);
     }
 
-    @Override
-    public String JokerAudience() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
+
+   
 }

@@ -18,17 +18,17 @@ public class Stack <T>
         }
     }
     
-    public void pop()
+    public T pop()
     {
         Node current;
         current=head.next;
         if(head==null){
             System.out.println("Empty stack");
         }
-        else
-        {
+        
             head.next=current.next;
-        }
+            return (T) head.next;
+        
     }
     
     public int size()

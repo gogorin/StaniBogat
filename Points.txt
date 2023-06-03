@@ -1,3 +1,4 @@
 gogo	0
 gogorin	0
 gogo8	0
+gogorin34	0
